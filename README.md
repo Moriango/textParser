@@ -87,6 +87,11 @@ class TextParserTest(unittest.TestCase):
         """Test if the word input is found ex. FourthThursday/November"""
         format = Format()
         self.assertEqual(format.find_file('fourththursday/november'), '"/Holidays/11-28Thanksgiving.png"')
+    
+    def test_word_input_dates_lowercase(self):
+        """Test if the word input is found ex. fourththursday/november"""
+        format = Format()
+        self.assertEqual(format.find_file('fourththursday/november'), '"/Holidays/11-28Thanksgiving.png"')
 ```
 ### Possible errors
 
